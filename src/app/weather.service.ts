@@ -1,22 +1,15 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
+  import { HttpClient } from '@angular/common/http';
+  import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class WeatherService {
+  @Injectable({
+    providedIn: 'root'
+  })
+  export class WeatherService {
 
-  private apiUrl = ``;
+    constructor(private http: HttpClient) { }
 
-  constructor(private http: HttpClient) { }
-
-  getWeather(cityName  : string) {
-    // this.http.get(environment.weatherApiBaseUrl, {
-    //   headers: new HttpHeaders()
-    //   .set(environment.XRapidAPIHostHeaderName , environment.XRapidAPIHostHeaderValue)
-    //   .set(environment.XRapidAPIKeyHeaderName, environment.XRapidAPIKeyHeaderValue),
-    //   params: new HttpParams()
-    // })
+    getWeather(city: string, countryCode: string) {
+      return this.http.get(`https://api.openweathermap.org/data/2.5/weather?q=${city},${countryCode}&appid=70690d2c9fa97c10245d457ffa71df51&units=imperial`);
+    }
+    
   }
-}

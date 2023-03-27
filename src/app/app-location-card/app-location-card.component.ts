@@ -1,21 +1,56 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { WeatherService } from '../weather.service';
-
-
-
 
 @Component({
   selector: 'app-location-card',
   templateUrl: './app-location-card.component.html',
   styleUrls: ['./app-location-card.component.css']
 })
-export class AppLocationCardComponent implements OnInit{
-  @Input() location: any;
+export class AppLocationCardComponent implements OnInit {
 
-  constructor(private weatherService: WeatherService) { }
+  locations = [
+    { city: 'India', countryCode: 'in' },
+    { city: 'London', countryCode: 'uk' },
+    { city: 'New York', countryCode: 'us' },
+    { city: 'Paris', countryCode: 'fr' },
+    { city: 'Tokyo', countryCode: 'jp' },
+    { city: 'Dubai', countryCode: 'ae' },
+    { city: 'Sydney', countryCode: 'au' },
+    { city: 'Cape Town', countryCode: 'za' }
+  ];
+
+  weatherData: any = [];
+
+  constructor(private weatherService: WeatherService,
+    private router: Router
+    ) { }
+
   ngOnInit(): void {
-    // this.weatherService.getWeather().subscribe((data: any[]) => {
-      // this.posts = data;
-    // });
+    this.getWeatherData();
   }
+
+  getWeatherData() {
+    for (let location of this.locations) {
+      this.weatherService.getWeather(location.city, location.countryCode).subscribe({
+        next: (res: any) => {
+          console.log(res);
+          this.weatherData.push(res);
+        },
+        error: (error: any) => {
+          console.log(error);
+        },
+        complete: () => {
+          console.info('Completed');
+        }
+      });
+    }
+  }
+
+ navigateToWeatherDetail(location: any) {
+  this.router.navigate(['/weather', location.city, location.countryCode]);
+}
+
+  
+
 }

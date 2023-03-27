@@ -11,15 +11,15 @@ export class AppComponent {
   locations = [
     {
       name: 'New York City',
-      description: 'The largest city in the United States, known for its famous landmarks and diverse culture.'
+      temperature: '21'
     },
     {
       name: 'Paris',
-      description: 'The capital city of France, known for its romantic atmosphere and world-famous cuisine.'
+      temperature: 'The capital city of France, known for its romantic atmosphere and world-famous cuisine.'
     },
     {
       name: 'Tokyo',
-      description: 'The capital city of Japan, known for its cutting-edge technology and unique culture.'
+      temperature: 'The capital city of Japan, known for its cutting-edge technology and unique culture.'
     },
   ];
 }
