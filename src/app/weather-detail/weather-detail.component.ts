@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { WeatherService } from '../weather.service';
+import { RouterModule, Routes } from '@angular/router';
+
 
 @Component({
   selector: 'app-weather-detail',
@@ -9,15 +11,13 @@ import { WeatherService } from '../weather.service';
 })
 export class WeatherDetailComponent implements OnInit {
 
-  
-
   city: string = '';
   countryCode: string = '';
   weatherData: any = {};
 
   constructor(private route: ActivatedRoute, private weatherService: WeatherService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.route.params.subscribe(params => {
       this.city = params['city'];
       this.countryCode = params['countryCode'];
@@ -39,5 +39,4 @@ export class WeatherDetailComponent implements OnInit {
       }
     });
   }
-
 }

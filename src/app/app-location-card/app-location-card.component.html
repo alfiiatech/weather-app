@@ -9,7 +9,7 @@
           <p class="card-text">Min-Temperature: {{ weather.main.temp_min }}°C</p>
           <p class="card-text">Max-Temperature: {{ weather.main.temp_max }}°C</p>
           <p class="card-text">Humidity: {{ weather.main.humidity }}%</p>
-          <a href="javascript:void(0)" routerLink="weather/:?city/:countryCode" class="card-link" (click)="navigateToWeatherDetail(weather)">More</a>
+          <a [routerLink]="['/weather', weather.name, weather.sys.country]" class="card-link">More</a>
         </div>
       </div>
     </div>

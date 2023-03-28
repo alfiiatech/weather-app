@@ -1,0 +1,25 @@
+.container {
+    padding-top: 50px;
+    padding-bottom: 10px;
+    color: #405065;
+}
+
+.search-hero {
+    max-width: 300px;
+    padding-bottom: 50px;
+    margin: auto;
+}
+
+input {
+    height: 25px;
+}
+
+.form-control {
+    box-shadow: 0 10px 40px 0 #B0C1D9;
+}
+
+button {
+    height: 30px;
+background-color: #B0C1D9;
+
+}

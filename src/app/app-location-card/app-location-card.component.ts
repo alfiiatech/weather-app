@@ -47,9 +47,10 @@ export class AppLocationCardComponent implements OnInit {
     }
   }
 
- navigateToWeatherDetail(location: any) {
-  this.router.navigate(['/weather', location.city, location.countryCode]);
-}
+  navigateToWeatherDetail(city: string, countryCode: string) {
+    this.router.navigate(['/weather', city, countryCode]);
+  }
+  
 
   
 

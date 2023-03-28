@@ -12,6 +12,7 @@
     box-shadow: 4px 2px 5px #ccc;
     overflow: hidden;
     background-color: powderblue;
+    background-image: url('src/assets/image/download.jpeg');
 }
 
 .card-body {
@@ -30,12 +31,16 @@
     font-size: 1rem;
     margin-bottom: 0.5rem;
     text-align: center;
+    color: white;
 }
 
 .card-text {
     font-size: 1rem;
     color: #555;
     margin-bottom: 1rem;
+    color: white;
+    font-weight: 2rem;
+
 }
 
 .btn {
@@ -51,3 +56,7 @@
 .btn:hover {
     background-color: #0069d9;
 }   
+
+a{
+    color: white;
+}
