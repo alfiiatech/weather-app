@@ -44,11 +44,12 @@ export class SearchComponent implements OnInit {
         },
         error: (error: any) => {
           console.log(error);
-          this.error = 'Error fetching weather information. Please try again.';
+          this.error = 'Wrong Location Please try again.';
         }
       });
     } else {
       this.error = 'Please enter a location.';
+      console.log("enter a location")
     }
   }
 }

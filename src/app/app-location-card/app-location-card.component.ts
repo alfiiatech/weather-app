@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { WeatherService } from '../weather.service';
+import { RouterModule, Routes } from '@angular/router';
+
 
 @Component({
   selector: 'app-location-card',
@@ -24,7 +26,7 @@ export class AppLocationCardComponent implements OnInit {
 
   constructor(private weatherService: WeatherService,
     private router: Router
-    ) { }
+  ) { }
 
   ngOnInit(): void {
     this.getWeatherData();
@@ -50,8 +52,8 @@ export class AppLocationCardComponent implements OnInit {
   navigateToWeatherDetail(city: string, countryCode: string) {
     this.router.navigate(['/weather', city, countryCode]);
   }
-  
 
-  
+
+
 
 }

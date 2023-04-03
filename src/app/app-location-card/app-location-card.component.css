@@ -6,18 +6,18 @@
 
 .card {
     margin: 1rem;
-    width: 300px;
+    width: 250px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 4px 2px 5px #ccc;
     overflow: hidden;
     background-color: powderblue;
-    background-image: url('src/assets/image/download.jpeg');
+    background-image: url('src/assets/image/download (2).jpeg');
 }
 
 .card-body {
     padding: 1rem;
-    text-align: justify;
+    text-align: center;
 }
 
 .card-id {
@@ -28,17 +28,14 @@
 }
 
 .card-title {
-    font-size: 1rem;
     margin-bottom: 0.5rem;
     text-align: center;
     color: white;
 }
 
 .card-text {
-    font-size: 1rem;
-    color: #555;
     margin-bottom: 1rem;
-    color: white;
+    color: black;
     font-weight: 2rem;
 
 }
@@ -51,12 +48,15 @@
     border-radius: 5px;
     text-decoration: none;
     transition: all 0.2s ease;
+    border: none;
 }
 
 .btn:hover {
     background-color: #0069d9;
-}   
+}
 
-a{
-    color: white;
+h2 {
+    background-color: black;
+    text-align: center;
+    color: #fff;
 }

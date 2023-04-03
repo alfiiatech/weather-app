@@ -1,19 +1,16 @@
 .card {
     margin: 0 auto;
-    width: 300px;
+    width: 350px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-shadow: 4px 2px 5px #ccc;
+    box-shadow: 5px 4px 5px 2px #ccc;
     overflow: hidden;
-    background-image: url('src/assets/image/images (1).jpeg');
-    background-size: cover;
-    background-position: center;
-    align-items: center;
+    text-align: center;
 }
 
 .card-body {
     padding: 1rem;
-    text-align: justify;
+    color: black;
 }
 
 .card-id {
@@ -24,18 +21,15 @@
 }
 
 .card-title {
-    font-size: 1rem;
     margin-bottom: 0.5rem;
     text-align: center;
-    color:white;
+    color: black;
 }
 
 .card-text {
     font-size: 1rem;
-    color: #555;
+    color: black;
     margin-bottom: 1rem;
-    color:white;
-
 }
 
 .btn {
@@ -46,11 +40,9 @@
     border-radius: 5px;
     text-decoration: none;
     transition: all 0.2s ease;
+    border: none;
 }
 
 .btn:hover {
     background-color: #0069d9;
 }
- a{
-    color: white;
- }
